@@ -1,0 +1,10 @@
+flowchart LR
+    Household[Household customer] --> UC1([Create household and member profiles])
+    Household --> UC2([Complete nutrition questionnaires])
+    Household --> UC3([Review plan and quote])
+    Household --> UC4([Start or manage subscription])
+    Household --> UC5([Track order and delivery])
+    Staff[Operations staff] --> UC6([Manage menu and orders])
+    Staff --> UC7([Prepare daily kitchen plan])
+    UC4 -. requires .-> UC3
+    UC3 -. uses .-> UC2
