@@ -1,0 +1,74 @@
+{
+  "purpose": "Synthetic planning fixture; no real participant data",
+  "household_id": "SYN-HH-A",
+  "other_household_id": "SYN-HH-B",
+  "members": [
+    {
+      "id": "SYN-P01",
+      "restrictions": [
+        "milk"
+      ]
+    },
+    {
+      "id": "SYN-P02",
+      "restrictions": []
+    }
+  ],
+  "meals": [
+    {
+      "id": "SYN-M01",
+      "declared_allergens": [
+        "milk"
+      ],
+      "ingredients_complete": true
+    },
+    {
+      "id": "SYN-M02",
+      "declared_allergens": [],
+      "ingredients_complete": true
+    },
+    {
+      "id": "SYN-M03",
+      "declared_allergens": [],
+      "ingredients_complete": false
+    }
+  ],
+  "quote": {
+    "members": 2,
+    "meals_per_member_per_day": 3,
+    "days": 30,
+    "unit_price_kzt": 1200,
+    "rule_version": "synthetic-v1"
+  },
+  "change_policy": {
+    "timezone": "Asia/Almaty",
+    "deadline": "2026-11-01T20:00:00+05:00",
+    "rule": "request_time < deadline"
+  },
+  "daily_plan": {
+    "date": "2026-11-02",
+    "orders": 1,
+    "members": 2,
+    "meals_per_member": 3
+  },
+  "expected": {
+    "eligibility": {
+      "SYN-P01": {
+        "SYN-M01": "blocked: milk",
+        "SYN-M02": "eligible",
+        "SYN-M03": "hold: ingredient declaration incomplete"
+      },
+      "SYN-P02": {
+        "SYN-M01": "eligible",
+        "SYN-M02": "eligible",
+        "SYN-M03": "hold: ingredient declaration incomplete"
+      }
+    },
+    "quote_total_kzt": 216000,
+    "daily_plan_total_meals": 6,
+    "repeated_same_confirmation_logical_orders": 1,
+    "deadline_minus_one_second": "allow if otherwise eligible",
+    "exact_deadline": "reject",
+    "after_deadline": "reject"
+  }
+}

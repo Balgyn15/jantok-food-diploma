@@ -1,7 +1,11 @@
-# Source code — first technical preview
+# Planned application components
 
-- [mobile](mobile/) — Flutter/Dart static navigation for the household, menu and delivery concept.
-- [backend](backend/) — dependency-free Node HTTP preview for quote arithmetic and allergen exclusion rules.
-- [admin](admin/index.html) — static staff dashboard concept.
+This first-pre-defense snapshot reserves the implementation boundaries below. Application code will be integrated through task branches and reviewed PRs.
 
-These are small starter components, not the original mature JANTOK application or a production service. The mobile and admin views use synthetic data; the backend has no authentication, database, payment or delivery integration. The planned stack and tradeoffs are in [technology comparison](../docs/TECH_COMPARISON.md).
+| Component | Selected technology | Responsibility |
+| --- | --- | --- |
+| [mobile](mobile/) | Flutter / Dart | Household profiles, questionnaire, menu, quote, subscription and delivery views |
+| [backend](backend/) | NestJS / TypeScript / Prisma | Authentication, authorization, member restrictions, quotes, subscriptions and fulfillment |
+| [frontend](frontend/) | Next.js / React / TypeScript | Staff menu/order operations and daily kitchen plan |
+
+The architecture is documented in [docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md). The actual UX sources belong in [prototype](../prototype/) and test planning in [tests](../tests/). Runtime manifests and setup commands will be added with runnable code. Earlier technical-preview files remain recoverable in Git history.

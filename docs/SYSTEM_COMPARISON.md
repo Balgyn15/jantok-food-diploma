@@ -1,23 +1,35 @@
-# Existing systems — comparable evidence
+# Existing-system comparison — Astana, version 1.0
 
-JANTOK-4. Desk comparison checked 22 October 2026 from providers' current public pages. This table is a research draft for Ayana to review. A question mark means the cited page does not establish the capability; it is not a claim that the system lacks it. Services differ in business model, which is stated explicitly.
+Checked: 23 October 2026. YouTrack: JANTOK-4. This comparison prioritizes five ready-meal providers whose official public material names Astana. It compares public descriptions, not purchased service performance or private account screens.
 
-## Criteria and evidence
+## Common criteria
 
-The eight criteria map to the proposed requirements: C1 Astana coverage (project scope), C2 delivered ready-to-eat meals (scope), C3 separate household member preferences (FR-01/02), C4 stated allergy/restriction handling (FR-02), C5 subscription/plan duration (FR-03), C6 user menu changes (FR-04), C7 visible price before order (FR-03), and C8 delivery status or tracking (FR-05). “Yes” means the linked public page explicitly describes it; “partial” describes a narrower related feature.
+C1 Astana delivery; C2 ready-to-eat meals; C3 separate member profiles/questionnaires inside one household account; C4 stated allergy/restriction handling; C5 plan duration; C6 meal/day changes; C7 price visible before order; C8 customer order/delivery-status workflow.
 
-| System (official evidence) | C1 Astana | C2 Ready meals | C3 Members | C4 Restrictions | C5 Plan | C6 Changes | C7 Price | C8 Status |
+These criteria reflect project scope and FR-01–05. **Not established** means the inspected material does not demonstrate the feature. It does not mean the service lacks it. A sales claim is identified as such and is not independent verification.
+
+| System / official source | C1 Astana | C2 Ready meals | C3 Member profiles | C4 Restrictions | C5 Duration | C6 Changes | C7 Price | C8 Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [FIT MEAL](https://www.fitmeal.kz/) | Yes | Yes | ? | Goal-based plans; allergy handling ? | 7-day example | Pause stated; self-service menu changes ? | Yes, tariff shown | Delivery windows shown; live status ? |
-| [Hemingway Healthy Club](https://hhc.kz/) | Yes | Yes | ? | Allergy/preferences stated; exact workflow ? | 1–30 days shown | ? | Yes, total and daily amount | Daily delivery stated; live status ? |
-| [Healthy Nation](https://healthy-nation.kz/) | Yes | Yes | ? | ? | Weekly menu; subscription term ? | Meal replacement stated | Example item price shown | Free local delivery; live status ? |
-| [MyFitnessPal Meal Planner](https://support.myfitnesspal.com/hc/en-us/articles/34603055097869-How-to-use-the-Meal-Planner) | No: listed countries exclude Kazakhstan | No: recipe/grocery planning | Household size and shared meals | Allergies and dislikes entered | 2–15 day plans | Recipe swaps | Premium+ service; prepared-meal quote N/A | Grocery partner handoff; meal delivery N/A |
-| [HelloFresh Family](https://www.hellofresh.com/eat/kid-friendly-meal-delivery) and [allergen FAQ](https://www.hellofresh.com/about/faq?categoryId=enUS-FAQ-recipes-and-ingredients) | No: US page says continental US | No: meal kits to cook | 2 or 4 servings; distinct member profiles ? | Ingredient/allergen disclosure; no certified nut/gluten-free plan | Weekly plan | Meal and schedule changes | Offer varies; exact total requires checkout | Delivery day; live tracking ? |
+| [FIT MEAL](https://www.fitmeal.kz/) | Advertised | Advertised | Not established | FAQ says the ration can be adjusted for allergies/intolerance | 7-day example | Pause through staff; self-service meal change not established | Tariff visible; final confirmation with manager | Delivery arrangements described; customer status interface not established |
+| [Hemingway Healthy Club](https://hhc.kz/) | Advertised | Advertised | Not established | Allergy/preferences tailoring advertised | 1/7/10/14/21/30 days displayed | Not established | Plan total and daily amount displayed | Daily delivery described; customer status interface not established |
+| [Healthy Nation](https://healthy-nation.kz/) | Advertised | Advertised | Not established | Not established | Weekly menu visible; contract duration not established | Meal replacement displayed | Example item/order amount displayed | Delivery promise displayed; customer status interface not established |
+| [EatFit](https://eatandfit.kz/) | Advertised | Advertised | Two plans to one address advertised; separate member questionnaires not established | Individual ration and allergy/intolerance handling advertised | 7/14/21/28 days displayed | Dietitian-assisted replacements advertised | Total and daily amount displayed | Morning window described; customer status interface not established |
+| [SKINNY zucchini](https://skinny-zucchini.kz/) | Advertised | Advertised | Not established | FAQ says nutritionist can adapt for allergies/disliked products | Trial/day and longer courses; 20/28-day offers displayed | Day transfers and allergy replacements advertised | Daily prices displayed | Morning delivery described; customer status interface not established |
 
-## Interpretation
+## Evidence and reproducibility
 
-Local services demonstrate that Astana delivery, ready meals, a visible price and some tailoring are already available. Their public pages do not establish whether separate family-member questionnaires, traceable allergen decisions, or live order status exist. That is a **public-evidence gap**, not proof of missing features. MyFitnessPal provides household-aware planning and allergy inputs but, by its own availability statement, is not a prepared-meal delivery service in Kazakhstan. HelloFresh is a family meal-kit benchmark with transparent allergen disclosures; its own FAQ warns that certain allergen-free plans are not certified. JANTOK's proposed contribution is an integrated, per-member prepared-meal workflow for a local service. The requirement remains a hypothesis until interviews/client discussion and direct task-based observation confirm it.
+| Evidence | Inspected public material | Supported observations / limit |
+| --- | --- | --- |
+| M01 — FIT MEAL | Program block and FAQ | Astana service, 7-day tariff, dietary adjustment and staff-assisted pause. We did not submit an order. |
+| M02 — Hemingway | City/program selection and feature list | Astana, up-to-30-day selection, price and allergy/preference claim. Personalized account behavior was not tested. |
+| M03 — Healthy Nation | Indexed official homepage text, consistent with 22 Oct page observation | Astana, weekly ready-meal menu, replacement and example amount. Direct text extraction was unavailable on 23 Oct; no further capabilities are inferred. |
+| M04 — EatFit | Program selector and FAQ | Astana, plan durations, two-ration/address offer and allergy/meal-change statements. A multi-member account was not observed. |
+| M05 — SKINNY zucchini | City selection, programs and FAQ | Astana, course offers, dietary adjustments and transfers. Account/status workflow was not observed. |
 
-## Verification to do before final claims
+No forms were submitted, private accounts accessed, purchases made or provider performance tested. Repeat the same checks before making stronger final-thesis claims; retain dated observations and clarify any unknown capabilities directly where feasible. Displayed promotional prices are not ranked: serving sizes, calorie targets, durations and offers differ.
 
-Ayana should save the dated page/plan screenshots, test the ordering flows where accessible, and ask providers or users about any “?” fields. Product pages can change; repeat this comparison before pre-defense. Prices are not compared numerically because tariff, duration, servings and promotions differ.
+## Implication for JANTOK
+
+Astana already has direct service-category competitors. Ready meals, subscription-like plans, visible prices and some dietary tailoring cannot be claimed as unique JANTOK inventions. The proposed distinction is the **combined software workflow**: one household account, separate member questionnaires and restriction decisions, coordinated meal choices, an itemized family quote and fulfillment information.
+
+Public material did not establish this entire combination for the five services. That is a feature combination to investigate, not proof of market exclusivity. Interviews and task-based comparison must determine whether it solves a meaningful problem. Local scope reduces delivery/operational complexity; it does not remove competition. Restaurant delivery, supermarkets and home cooking are also alternatives to buying a subscription, even though they are outside this five-provider table.
