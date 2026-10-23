@@ -1,6 +1,6 @@
 # JANTOK Food — Diploma Project
 
-Diploma project (SE-2404) on a digital service for personalized family meal subscriptions in Astana, Kazakhstan. This repository records the diploma team's own analysis, design, review and verified contributions. It is private while team and supervisor access is arranged.
+Diploma project (SE-2404) on a digital service for personalized family meal subscriptions in Astana, Kazakhstan. This repository records the diploma team's own analysis, design, review and verified contributions. The repository is public so the supervisor and committee can read the work. Contributor access and review roles will be arranged once their GitHub accounts are confirmed.
 
 ## Problem and users
 
@@ -33,15 +33,15 @@ Flutter/Dart for the client, NestJS/TypeScript for the API, PostgreSQL for persi
 
 ## Repository structure and documents
 
-- docs/ — proposal, research, comparisons, requirements, decisions, evaluation and risks.
-- diagrams/ — editable diagram source and readable exports.
-- prototype/ — key user scenario mockups or a verified prototype link.
-- src/, tests/, config/ — application code, tests and configuration examples when added.
+- [docs/](docs/) — draft research plans, comparisons, requirements, architecture, evaluation and risks. [The proposal](https://github.com/Balgyn15/jantok-food-diploma/pull/1) is in a draft PR awaiting review.
+- [diagrams/](diagrams/) — editable Mermaid source; rendered versions are in [the architecture document](docs/ARCHITECTURE.md).
+- [prototype/SCENARIO.md](prototype/SCENARIO.md) — first text wireframe; visual mockups and usability feedback are pending.
+- [src/](src/) and [tests/](tests/) mark where application code and automated tests will be added; [config/.env.example](config/.env.example) contains placeholder settings.
 
-The above structure is the target organization. Direct links will be added as deliverables are committed. No interview, source review, test or supervisor approval is marked complete solely because a placeholder exists.
+These are initial materials, not completed research or approved deliverables. No interview, scientific review, test or supervisor approval is marked complete solely because a draft exists.
 
 ## Working and review process
 
-Use a task branch such as JANTOK-6-requirements and include the ID in commits and pull requests. Keep main as the reviewed baseline. Each PR should explain the deliverable, verification and remaining limitations; the other student reviews before merge. Link the PR or commit from its YouTrack task. Use separate GitHub accounts and identifiable commit details. Create pre-defense-1 only for the actual reviewed submission and never move that tag.
+Use a task branch such as codex/JANTOK-6-requirements and include the ID in commits and pull requests. Keep main as the reviewed baseline. Each PR should explain the deliverable, verification and remaining limitations; the other student reviews before merge. Link the PR or commit from its YouTrack task. Use separate GitHub accounts and identifiable commit details. Create pre-defense-1 only for the actual reviewed submission and never move that tag.
 
 Do not commit passwords, API keys, private user research, personal phone numbers or production configuration. Use anonymized evidence and placeholder configuration. Setup, run and test commands will be documented when runnable code is added to this repository.
