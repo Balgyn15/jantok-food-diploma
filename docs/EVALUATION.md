@@ -1,16 +1,31 @@
-# Verification and evaluation plan — draft
+# Verification and evaluation plan — version 1.0
 
-Owner: Balgyn. YouTrack: JANTOK-9. Planned activities are not test results.
+Date: 23 October 2026. YouTrack: JANTOK-9. This plan defines how the project aim will be demonstrated. No application evaluation outcomes are claimed in this submission.
 
-| Aim | Metric and provisional target | Conditions | Baseline |
+## Metrics, conditions and baseline
+
+| Objective | Metric / target | Measurement conditions | Baseline |
 | --- | --- | --- | --- |
-| Capture household needs safely | Completion rate and input errors for a two-member questionnaire; target 4/5 unaided completions in a pilot | Five consenting representatives if recruitment allows; same scripted profile and Android viewport; record failures | Same task on a paper form/spreadsheet |
-| Explain subscription price | Correct identification of period, included meals and total by at least 4/5 pilot participants | Same synthetic catalog and price rules; ask before giving hints | Static price sheet with the same data |
-| Enforce dietary restrictions | Zero conflicting meals selectable in the synthetic test set; report unknown ingredients separately | Fixed menu with explicit allergens, case and spelling variants; independent expected-output table | Unfiltered menu selection |
-| Track fulfillment | Median time and step count to locate today's status; report raw values and compare with baseline | Fixed status scenario, same device/network and participant instructions | Message or phone inquiry scenario |
+| Understand household ordering | At least 4/5 pilot users complete the two-member questionnaire-to-quote task unaided within 5 minutes | Five consenting target representatives; same synthetic task and Android device/viewport; count all failures/hints | Paper/spreadsheet household form with the same fields |
+| Understand subscription price | At least 4/5 correctly identify period, quantities, currency and total | Same fixture/catalog; ask before revealing the answer; report each response | Static itemized price sheet with identical inputs |
+| Enforce dietary constraints | 100% agreement with independently specified fixture decisions; zero prohibited selectable options in that fixture | Fixed known/incomplete ingredient cases, member separation and invalid input; report dataset size and unknowns | Unfiltered menu with no member-specific exclusions |
+| Coordinate meal/status tasks | Raw completion time, steps and errors for meal change and status lookup; compare each condition | Same order/date/deadline; counterbalance baseline/JANTOK order where possible | Menu spreadsheet plus scripted message/inquiry status scenario |
+| Preserve data and order consistency | All mandatory account/role, quote-snapshot, deadline and idempotency cases pass | Named build, controlled clock, reset synthetic database and logged request/result IDs | Independent expected values and state-transition specification |
+| Respond under small-service load | p95 read/quote server time <=1 second, errors reported separately | 20 concurrent simulated users for 5 minutes; 1000 meals/100 households; record hardware/build; exclude provider latency | Same endpoint/build with one user; report load-related change |
 
-Verification layers: requirement review; unit tests for pricing and restrictions; API integration tests for household separation and idempotency; end-to-end key flow; moderated usability observations. Existing Node tests cover only the first two domain rules, and the Flutter widget test covers static navigation. Authentication, persistence and real workflow tests cannot run until those features exist.
+Targets are project acceptance thresholds. The five-person pilot identifies usability risks and does not establish population-level demand, health benefit or reduced family conflict.
 
-Before measurement, freeze a synthetic menu and two-member profile; define expected eligibility and quote values independently of the implementation; use identical data in baseline and JANTOK conditions. Counterbalance task order where possible. Record consent, device, app version, date, sample size, raw timings, errors and exclusions. Do not store names, health details, phone numbers or recordings in the public repository. The small pilot target checks usability risk; it is not a statistical claim about all Astana families.
+## Verification stages
 
-An allergen filter cannot establish food safety by itself because cross-contact and ingredient labeling require operational controls. The evaluation will report software decision errors separately from kitchen safety validation, following the [FDA context source](https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies?lv=true). No evaluation outcome has been measured yet.
+1. **Analysis/design now:** check requirement coverage, diagram/component consistency, mockup tasks, fixture arithmetic, source links and expected outputs. Keep actual user evidence separate from assumed benefits.
+2. **During implementation:** unit tests for restrictions/quotes/deadlines; API/database integration tests for ownership, snapshots and idempotency; Flutter widget/integration tests; staff-role checks.
+3. **Integrated evaluation:** complete household-to-staff workflow, controlled staging load and moderated usability comparison with the stated baseline.
+4. **Supervisor review:** record comments, resulting corrections and any revised target before evaluating the final build.
+
+## Supporting materials and recording
+
+[test-cases.csv](../tests/test-cases.csv) lists TC-01–TC-16 and links them to requirement IDs. [household-scenario.json](../tests/fixtures/household-scenario.json) fixes the synthetic menu, members, price arithmetic and deadline boundary. The tests folder currently contains plans/data; executable tests are added with runnable features.
+
+For each run record case ID, build/tag, date, environment, procedure, expected/actual result, pass/fail, evidence and issue for any defect. For usability retain participant code, task order, device, time, hints, errors and completion. Freeze the fixture and expected values before running; do not change expected outputs to match faulty behavior.
+
+Participation is voluntary and consent precedes observation. Public materials contain anonymous summaries and synthetic data. Keep identifiable notes/recordings outside Git. Software ingredient filtering is not a guarantee against kitchen cross-contact or undeclared allergens; verify those operational dependencies before real use ([FDA context](https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies)).

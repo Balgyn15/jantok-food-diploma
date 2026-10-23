@@ -1,0 +1,17 @@
+case_id,requirements,priority,layer,procedure,expected_result,status
+TC-01,FR-01,P0,Unit/API,Save two members; update P01; reload the household,Two distinct members persist; P02 unchanged,Planned - not executed
+TC-02,FR-02,P0,Unit/API/UI,Evaluate SYN-M01 for SYN-P01 and SYN-P02,P01 blocked with milk reason; P02 eligible,Planned - not executed
+TC-03,FR-02,P0,Unit/API/UI,Evaluate incomplete ingredient declaration SYN-M03,Hold for verification for both members; not selectable,Planned - not executed
+TC-04,FR-03,P0,Unit/API/UI,Quote 2 members x 3 meals x 30 days x 1200 KZT,216000 KZT; quantities/period/currency/rule version shown,Planned - not executed
+TC-05,FR-03;NFR-02,P0,API/Database,Save quote then change current price-rule configuration,Existing quote retains original inputs/version/total; new quote uses new rule,Planned - not executed
+TC-06,FR-04,P0,API/UI,Before deadline choose eligible M02; reload; try blocked M01 for P01,Allowed selection persists; blocked selection leaves prior state unchanged,Planned - not executed
+TC-07,FR-04;NFR-02,P0,Unit/API,Use eligible change at deadline-1s; exact deadline; deadline+1s,Allow first only; reject exact and after; use Asia/Almaty,Planned - not executed
+TC-08,FR-05,P0,Integration/E2E,Staff updates HHA order status; HHA and HHB request it,HHA sees persistent new status; HHB receives no order data,Planned - not executed
+TC-09,FR-06,P1,API/UI,Staff filters daily plan for fixture date; customer repeats request,One order; two members; six meals; customer denied,Planned - not executed
+TC-10,FR-08,P1,API/Database,Staff versions meal declaration; compare future selection and confirmed snapshot,Future eligibility uses new version; existing confirmed snapshot unchanged,Planned - not executed
+TC-11,FR-07;NFR-01,P0,Security/API,Request private reads/writes as signed-out and another household,Documented denial; no private payload or mutation,Planned - not executed
+TC-12,FR-07;NFR-01,P0,Security/API,Customer requests staff status update and meal maintenance,Denied; order and meal records unchanged,Planned - not executed
+TC-13,NFR-02,P0,API/Database,Send same confirmation twice using identical idempotency key,One logical order; repeat returns same result; no duplicate charge,Planned - not executed
+TC-14,NFR-03,P1,Usability,Five users perform two-member questionnaire-to-quote task,Target at least 4/5 unaided within 5 minutes; retain all raw outcomes,Planned - not executed
+TC-15,NFR-04,P1,UI review,Repeat same core task and validation in Russian and Kazakh,Equivalent meaning/state; correct KZT and date display,Planned - not executed
+TC-16,NFR-05,P1,Load,20 concurrent users; 5 minutes; 1000 meals; 100 households; fixed staging hardware,Target p95 server read/quote time <=1000ms; report errors and hardware; exclude provider calls,Planned - not executed

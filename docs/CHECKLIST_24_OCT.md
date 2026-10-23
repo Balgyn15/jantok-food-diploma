@@ -1,34 +1,42 @@
-# 24 October pre-defense readiness
+# 24 October submission checklist
 
-Snapshot: 22 October 2026. “Draft present” means a file exists and is reviewable; it does not mean the committee criterion is already met. Task owners and deadlines should be checked in [YouTrack](https://balgyn.youtrack.cloud/projects/JANTOK/issues).
+Updated: 23 October 2026. This checklist compares the actual snapshot with the supplied rubric. Version 1.0 means a defined analysis/design baseline; it does not imply supervisor approval, completed implementation or completed human review.
 
-| Required item | File/evidence | Status and next action |
+| Rubric item | Deliverable | Current status / remaining action |
 | --- | --- | --- |
-| 1. Project proposal and scope | [PROPOSAL.md](PROPOSAL.md) | Draft present; verify scope with client/users and supervisor. |
-| 2. Relevance evidence | [RESEARCH_PLAN.md](RESEARCH_PLAN.md) | **Missing primary evidence**: 3–5 representative discussions or substantive client agreement. Do not invent interviews. |
-| 3. Literature review | [LITERATURE_REVIEW.md](LITERATURE_REVIEW.md) | Desk draft with 12 used sources, 10 scientific; Ayana should verify reading, metadata and conclusions. |
-| 4. Existing systems | [SYSTEM_COMPARISON.md](SYSTEM_COMPARISON.md) | Five systems and eight consistent criteria; unknown features need direct checks. |
-| 5. Technology alternatives | [TECH_COMPARISON.md](TECH_COMPARISON.md) | Three decisions with three alternatives each; choices remain provisional. |
-| 6. Requirements and acceptance | [REQUIREMENTS.md](REQUIREMENTS.md) | Initial FR/NFR with priorities and checks; trace to primary evidence after interviews. |
-| 7. Context, use cases, components | [ARCHITECTURE.md](ARCHITECTURE.md), [diagrams](../diagrams/) | Three editable .mmd files and three .svg exports present; pending review. |
-| 8. UX/prototype | [UX_PROTOTYPE.md](UX_PROTOTYPE.md), [screens](../prototype/screens/) | Six source HTML files and six PNG previews present; usability feedback pending. |
-| 9. Verification/evaluation | [EVALUATION.md](EVALUATION.md), [tests](../tests/) | Plan and starter tests present; measured outcomes pending. |
-| 10. Management/risks | [PROJECT_PLAN.md](PROJECT_PLAN.md), [YouTrack](https://balgyn.youtrack.cloud/projects/JANTOK/issues) | Tasks and risks present; peer-review trail and individual Ayana contributions still needed. |
-| 11. Supervisor feedback | [SUPERVISOR_FEEDBACK.md](SUPERVISOR_FEEDBACK.md) | **Missing actual feedback**; record only genuine comments and resulting changes. |
+| 1. Project proposal | [PROPOSAL.md](PROPOSAL.md) | Defined problem, users, aim/objectives, team/supervisor, scope/outcomes and engineering complexity present |
+| 2. Relevance evidence | [RELEVANCE_EVIDENCE.md](RELEVANCE_EVIDENCE.md) | Four conversations/approximate 25–40 age range and positive reaction reported by team; original dates and substantive individual findings missing; complete honest reconstruction/follow-up |
+| 3. Literature | [LITERATURE_REVIEW.md](LITERATURE_REVIEW.md) | 12 used sources, 10 scientific (2022–2025); critical table/synthesis and full bibliography; PubMed metadata/abstracts and seven open full-text discussion/limitation sections checked; appraisal limits stated |
+| 4. Existing systems | [SYSTEM_COMPARISON.md](SYSTEM_COMPARISON.md) | Five Astana providers, eight common criteria, dated evidence and unknowns; no unsupported claim of no competition |
+| 5. Technologies | [TECH_COMPARISON.md](TECH_COMPARISON.md), [DECISIONS.md](DECISIONS.md) | Five key decisions, three alternatives each; selected Flutter/NestJS/PostgreSQL/HTTP/Next.js baseline and tradeoffs |
+| 6. Requirements | [REQUIREMENTS.md](REQUIREMENTS.md) | Eight FR and five NFR, P0/P1, acceptance criteria and design/test mapping; stakeholder review outstanding |
+| 7. Architecture | [ARCHITECTURE.md](ARCHITECTURE.md), [diagrams](../diagrams/) | Required three views; editable .mmd and SVG pairs; component/data/scenario alignment described |
+| 8. UX | [UX_PROTOTYPE.md](UX_PROTOTYPE.md), [prototype](../prototype/) | Six HTML/PNG mobile screens, scenario links, quote/staff state specification; team confirms design archive permission; user walkthrough remains future work |
+| 9. Verification/evaluation | [EVALUATION.md](EVALUATION.md), [tests](../tests/) | Metrics, conditions, baseline, 16 planned cases and synthetic expected outputs present; actual application testing follows runnable implementation |
+| 10. Management/risks | [PROJECT_PLAN.md](PROJECT_PLAN.md), [YouTrack](https://balgyn.youtrack.cloud/projects/JANTOK/issues) | Assigned/prioritized tasks, deadlines, scope, milestones and risks present; genuine contributions/cross-review, access check and submission tag outstanding |
+| 11. Supervisor feedback | [SUPERVISOR_FEEDBACK.md](SUPERVISOR_FEEDBACK.md) | Actual dated feedback and resulting revisions outstanding |
 
-## Repository structure check
+## Repository minimum and structure
 
-- Source code: src/mobile, src/backend and src/admin contain a small, explicitly labelled starter; application is incomplete by design.
-- Documentation: all written deliverables are in docs. The README links every section.
-- Diagrams: editable Mermaid and generated SVG exports are together in diagrams.
-- Tests: Node domain tests are in tests/backend; Flutter's standard widget test is in src/mobile/test.
-- Configuration: Node package.json and Flutter pubspec.yaml define dependencies; config/.env.example uses placeholders; .gitignore excludes secrets and .codex.
+| Requirement | Location / status |
+| --- | --- |
+| README with project, people, scope, status, stack and links | [README](../README.md) present; viewing instructions match static submission |
+| Source organized by component | src/mobile, src/backend, src/frontend contain component plans; executable application is not required for this stage |
+| Written documentation together | docs contains all written deliverables and this checklist |
+| Editable diagrams and readable exports | diagrams contains three paired sources/exports |
+| Prototype material | prototype contains six editable screens and matching PNG previews |
+| Tests and supporting materials | tests contains planned cases and synthetic fixture; executable tests follow runnable code |
+| Configuration/dependencies | config contains placeholder environment and dependency/manifest plan; real manifests follow runnable components |
+| Progressive contributions by both members | Not yet demonstrated by the repository history; assisted preparation alone does not satisfy it |
+| Task ↔ change traceability | Task IDs in existing commits/PRs and PR links in YouTrack; revised deliverables will be linked to their review PR |
+| Branches and review before merge | PR #1/#2 merged without submitted reviews; next PR must receive actual peer review |
+| Submission tag / hand-in statement | pre-defense-1 is created at actual reviewed submission; record exact SHA, completed work, limits and open tasks |
 
-## Submission evidence still requiring people
+## Human evidence still required
 
-1. Actual user/client discussions and a requirement-change log.
-2. Ayana's own identifiable commits and peer review; no assistant or Balgyn action can impersonate them.
-3. Supervisor's substantive feedback and documented revisions.
-4. Reviewed PRs, YouTrack links to merged deliverables, and an immutable pre-defense-1 tag at the real submission.
+1. Substantive notes/follow-up for the four real representatives or a substantive actual-client agreement.
+2. Each student's own meaningful review/corrections, identifiable commits and peer review; no backdating or simulated authorship.
+3. Supervisor's actual comments and documented response.
+4. Access check, reviewed merge and immutable tag at the real submission.
 
-The public repository alone does not prove these activities occurred.
+The first-pre-defense files cover the analysis/design/planning structure. Full rubric compliance cannot be claimed until the outstanding evidence exists. A full application, live payment deployment, performance results and completed automated application suites are not minimum deliverables for 24 October.

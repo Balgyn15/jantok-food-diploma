@@ -1,40 +1,57 @@
-# Technology comparison and provisional choices
+# Technology comparison and selected baseline — version 1.0
 
-JANTOK-5. Reviewed against FR-01–06 and NFR-01–03 on 22 October 2026. These are technical design proposals, not performance benchmarks or supervisor-approved decisions. Official documentation supports feature claims; project-fit judgments are our inferences and must be revisited after user/client validation.
+Date: 23 October 2026. YouTrack: JANTOK-5. The baseline is selected for the team's diploma design; supervisor review is still pending. Official documentation supports platform capabilities; the judgments about fit are project decisions. Selection does not imply completed deployment or measured superiority.
 
-## 1. Server platform (households, quotes, roles and staff workflows)
+## 1. Mobile application
 
-| Alternative | Documented capability | Project-fit judgment / cost |
+| Alternative | Fit for JANTOK | Tradeoff |
 | --- | --- | --- |
-| [NestJS / TypeScript](https://docs.nestjs.com/fundamentals/testing) | Modules, dependency injection, unit/integration/e2e testing support. | Fits a modular API with shared typed contracts and a JavaScript staff client; needs disciplined runtime validation and team TypeScript skills. |
-| [Spring Boot / Java](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html) | Application context and test slices support layered services. | Strong option for transaction-heavy systems; larger framework and a second language increase initial team setup. |
-| [FastAPI / Python](https://fastapi.tiangolo.com/tutorial/) and [testing guide](https://fastapi.tiangolo.com/tutorial/testing/) | Typed request models, API documentation and pytest-oriented testing. | Fast iteration for a research prototype; Python server code would not share TypeScript types with the staff client. |
+| [Flutter / Dart](https://docs.flutter.dev/) | One component for Android and iOS, consistent questionnaire/calendar UI, unit/widget/integration tests | Team maintains Dart and validates platform plugins on each target |
+| [React Native / TypeScript](https://reactnative.dev/docs/getting-started) | React-based mobile UI; language overlap with web/backend | Native module behavior and platform-specific UI still require testing |
+| Native [Kotlin/Android](https://developer.android.com/compose) and [SwiftUI/iOS](https://developer.apple.com/swiftui/) | Direct platform integration and native UI conventions | Two separate UI implementations increase work for a two-person team |
 
-**Provisional choice:** NestJS, subject to a small team spike implementing FR-01 and a guarded FR-02 endpoint. Measure setup time, testability, request validation and error handling. A framework alone does not supply authorization or safe nutrition rules.
+**Selected: Flutter/Dart.** Shared UI and a single mobile feature structure suit the household workflow and team size. Android is the first evaluation target; iOS needs a separate device/build check before being claimed supported. FR-01–05 and NFR-03/04 drive this choice.
 
-## 2. Persistent data (member profiles, plan snapshots and payments)
+## 2. Backend platform
 
-| Alternative | Documented capability | Project-fit judgment / cost |
+| Alternative | Fit for JANTOK | Tradeoff |
 | --- | --- | --- |
-| [PostgreSQL](https://www.postgresql.org/docs/current/tutorial-transactions.html) and [constraints](https://www.postgresql.org/docs/current/ddl-constraints.html) | Atomic transactions and relational constraints. | Good fit for household/member/order links and consistent quote/order state; requires migrations and relational modeling. |
-| [MySQL InnoDB](https://dev.mysql.com/doc/refman/8.4/en/innodb-locking-transaction-model.html) | Transactions, isolation and locking. | Also a credible relational option; team should benchmark SQL features and deployment support before rejecting it. |
-| [MongoDB](https://www.mongodb.com/docs/manual/core/schema-validation/) | Flexible documents with optional schema validation. | Convenient for changing questionnaires; cross-entity invariants and query patterns would need more explicit design. Flexibility is not automatically beneficial here. |
+| [NestJS / TypeScript](https://docs.nestjs.com/) | Modules, validation/guards and service tests support separate household, quote and staff responsibilities | Runtime validation and authorization still need explicit implementation |
+| [Spring Boot / Java](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html) | Layered services, mature transaction/test tooling | Adds a separate language and framework setup |
+| [FastAPI / Python](https://fastapi.tiangolo.com/tutorial/) | Typed request models and API documentation; convenient for data experiments | Python implementation and client contracts require separate coordination |
 
-**Provisional choice:** PostgreSQL for FR-01/03 and NFR-02, because the proposed data have linked entities and consistent state transitions. Compare a small household/order schema in PostgreSQL and MySQL before finalizing. No live database is claimed in the starter prototype.
+**Selected: NestJS/TypeScript with Prisma.** A modular monolith keeps core rules in one API and shares the web team's language. FR-02/03/07/08 and NFR-01/02 require guards, transactions and independent rule tests, whatever framework is used.
 
-## 3. Interaction between clients and server
+## 3. Persistent data
 
-| Alternative | Documented capability | Project-fit judgment / cost |
+| Alternative | Fit for JANTOK | Tradeoff |
 | --- | --- | --- |
-| HTTP JSON with [OpenAPI contract](https://spec.openapis.org/oas/) | Machine-readable API description and common HTTP tooling. | Simple for mobile and staff clients; multiple endpoints and version discipline are needed. |
-| [GraphQL](https://graphql.org/learn/) | Typed schema and client-selected response fields. | Useful for complex variable views; query authorization and caching add implementation work for this stage. |
-| [gRPC](https://grpc.io/docs/what-is-grpc/introduction/) | Protocol Buffer contract and generated clients. | Strong typed service-to-service option; browser integration and toolchain are extra work for a small client/API boundary. |
+| [PostgreSQL](https://www.postgresql.org/docs/current/tutorial-transactions.html), [constraints](https://www.postgresql.org/docs/current/ddl-constraints.html) | Linked households, members, quotes, orders and immutable snapshots; atomic updates | Requires schema/migration design |
+| [MySQL InnoDB](https://dev.mysql.com/doc/refman/8.4/en/innodb-locking-transaction-model.html) | Also provides a credible relational transaction model | Team must coordinate its SQL/migration/deployment conventions |
+| [MongoDB](https://www.mongodb.com/docs/manual/core/schema-validation/) | Flexible questionnaire documents with schema validation options | Cross-entity invariants and historical snapshots need deliberate modeling |
 
-**Provisional choice:** HTTP JSON/OpenAPI for FR-01–06. Validate an API contract with the mobile prototype and a staff mock. Later internal jobs can use a different protocol if measured needs justify it.
+**Selected: PostgreSQL, accessed through Prisma.** Relational constraints and transactions fit FR-01/03/05 and NFR-02. JSON fields can represent versioned questionnaire answers without abandoning relational ownership.
 
-## Decision conditions
+## 4. Client/server interaction
 
-- Revisit choices if the client requires offline-first operation, high-volume real-time dispatch or an existing platform integration.
-- NFR-01 requires object-level authorization regardless of protocol; [OWASP API1:2023](https://api-security.owasp.org/editions/2023/en/0x11-t10/) identifies this as a common API risk.
-- NFR-02 requires testable integer money rules and idempotent operations regardless of database.
-- The current backend starter uses Node's built-in HTTP/test modules solely to exercise the domain rules without production dependencies. It is not an implemented NestJS/PostgreSQL deployment.
+| Alternative | Fit for JANTOK | Tradeoff |
+| --- | --- | --- |
+| HTTP JSON / [OpenAPI](https://spec.openapis.org/oas/latest.html) | Explicit mobile/staff requests, errors and shared API contract | Endpoint/version discipline required |
+| [GraphQL](https://graphql.org/learn/) | Clients select fields for complex variable views | Query-level authorization, caching and schema tooling add work |
+| [gRPC](https://grpc.io/docs/what-is-grpc/introduction/) | Generated typed contracts, especially between services | Browser gateway/toolchain overhead for a small client/API boundary |
+
+**Selected: HTTP JSON with OpenAPI.** It keeps the planned mobile and staff boundary simple. Background jobs may use Redis/BullMQ internally; this does not replace the public API contract.
+
+## 5. Staff web interface
+
+| Alternative | Fit for JANTOK | Tradeoff |
+| --- | --- | --- |
+| [Next.js / React / TypeScript](https://nextjs.org/docs) | Routing and React components for daily plan, meal and order views | Server/client boundaries and authorization must remain clear |
+| [Nuxt / Vue](https://nuxt.com/docs) | Structured Vue application and routing | Requires Vue conventions in addition to the selected team stack |
+| [Angular](https://angular.dev/overview) | Integrated application structure and forms | More framework-specific concepts for a small staff interface |
+
+**Selected: Next.js/React/TypeScript.** The staff client shares TypeScript tooling with the backend and delegates business decisions to the API.
+
+## Supporting choices and change rule
+
+Redis/BullMQ is selected for background processing only when required by notification/provider jobs. Core persistent state stays in PostgreSQL. External payment, SMS and delivery adapters remain boundaries until contracts are available. Exact package versions and lockfiles will accompany runnable component integration. [Configuration planning](../config/README.md) lists manifest locations. Changes to the baseline require a recorded decision, reason and impact on requirements/tests; supervisor approval is recorded separately.
