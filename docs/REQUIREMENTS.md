@@ -12,6 +12,17 @@ Status: proposed; validate against JANTOK-2 user/client evidence and supervisor 
 | FR-06 | P1 | Authorized staff can view a daily kitchen plan. | Staff can filter the plan by date; a customer account cannot access it. |
 | NFR-01 | P0 | Sensitive account and nutrition data is access controlled. | Cross-account API requests are rejected; role checks are tested. |
 | NFR-02 | P0 | Time and money calculations are consistent. | Business dates use Asia/Almaty; payments use integer minor units; repeat requests do not create duplicate charges. |
-| NFR-03 | P1 | The core flow is usable on a common Android phone. | A participant can complete questionnaire-to-quote in a moderated test under documented conditions. |
+| NFR-03 | P1 | The core flow is usable on a common Android phone. | In a five-person pilot, at least four participants complete questionnaire-to-quote without moderator hints; log device, task time and errors. |
+
+## Traceability at this draft stage
+
+| Requirement | Diagram or prototype | Verification status |
+| --- | --- | --- |
+| FR-01/02 | Use-case and component diagrams; family/questionnaire/menu previews | Static concept present; synthetic allergen-rule test passes; persistence and real ingredient validation pending. |
+| FR-03 | Use-case and component diagrams; subscription preview | Integer quote-rule test passes; detailed quote UI, persistence and payment pending. |
+| FR-04 | Menu and subscription previews | Static concept only; change-window and eligible-alternative tests pending. |
+| FR-05 | Context/component diagrams; delivery preview | Static concept only; staff-to-customer status path pending. |
+| FR-06 | Use-case/component diagrams; staff HTML preview | Static concept only; role checks and kitchen plan pending. |
+| NFR-01/02/03 | Component boundary; evaluation plan | Cross-account/idempotency/usability measurement pending. |
 
 Dependencies and open decisions: client approval of nutrition rules, actual prices, payment provider and delivery service are not yet evidenced. Trace each confirmed requirement to a user finding or client decision before marking it approved.
