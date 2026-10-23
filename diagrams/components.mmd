@@ -1,0 +1,10 @@
+flowchart LR
+    Mobile[Mobile client] -->|REST API| API[Backend API]
+    Admin[Staff web app] -->|REST API| API
+    API --> DB[(PostgreSQL)]
+    API --> Queue[(Job queue)]
+    Worker[Background worker] --> Queue
+    Worker --> DB
+    API --> Adapters[Provider adapters]
+    Worker --> Adapters
+    Adapters --> External[Payment, SMS and delivery services]

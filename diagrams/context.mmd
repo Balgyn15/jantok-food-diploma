@@ -1,0 +1,6 @@
+flowchart LR
+    Household[Household customer] -->|questionnaire, subscription, status| JANTOK[JANTOK Food system]
+    Staff[Operations staff] -->|menu and order operations| JANTOK
+    JANTOK -->|payment request and result| Payment[Payment provider]
+    JANTOK -->|login code request| SMS[SMS provider]
+    JANTOK -->|delivery request and status| Delivery[Delivery provider]

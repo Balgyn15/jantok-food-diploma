@@ -1,0 +1,21 @@
+flowchart LR
+    Customer[Household customer]
+    Staff[Operations staff]
+    subgraph System["JANTOK Food system"]
+      UC1([Manage household members])
+      UC2([Record nutrition restrictions])
+      UC3([Review eligible menu and quote])
+      UC4([Manage subscription and meal choices])
+      UC5([View delivery status])
+      UC6([Manage menu and orders])
+      UC7([Prepare daily kitchen plan])
+    end
+    Customer --> UC1
+    Customer --> UC2
+    Customer --> UC3
+    Customer --> UC4
+    Customer --> UC5
+    Staff --> UC6
+    Staff --> UC7
+    UC3 -. uses restrictions .-> UC2
+    UC4 -. requires quote .-> UC3
