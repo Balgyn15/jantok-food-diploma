@@ -8,7 +8,7 @@ Updated: 24 October 2026. YouTrack: JANTOK-10. All deadlines use Asia/Almaty. Th
 | --- | --- | --- |
 | First-pre-defense analysis/design baseline | 24 Oct 2026 | Proposal, literature/market/technology comparisons, requirements, three diagrams, eight screens, verification materials and risks linked from README |
 | Evidence and joint review | Before first submission | Six anonymized interview paraphrases checked by the students against the conversations; consent records retained privately; both students make identifiable substantive contributions and cross-review; supervisor comments/dispositions recorded |
-| First submission | 24 Oct 2026, at actual hand-in | Reviewed commit, immutable pre-defense-1 tag, repository link, completed/pending summary and accessible evidence |
+| First submission | 24 Oct 2026, at actual hand-in | Reviewed commit, immutable `prob-period-1` tag required by the submission form, repository link, completed/pending summary and accessible evidence |
 | Foundation and core workflow | Next implementation phase; dates agreed after feedback | Identity/households and schema, then restrictions/menu/quote, each through reviewed task PRs |
 | Fulfillment and evaluation | Later phase; dates agreed with supervisor | Staff/delivery path, integration/security tests, usability/baseline and measured outcomes |
 
@@ -37,7 +37,7 @@ Research/evidence/UX work and engineering/design/verification work are complemen
 | Risk / dependency | Likelihood / impact | Response / owner |
 | --- | --- | --- |
 | Interview paraphrases and consent evidence need checking | Medium / high | Have the students compare P01–P06 with the actual conversations and retain consent records privately; do not infer representative market demand; Ayana |
-| Supervisor feedback arrives late | Medium / high | Present concrete baseline; keep feedback task open until comments and responses exist; both |
+| Supervisor feedback is too general to guide revisions | Medium / medium | Record the project owner's report of a positive assessment accurately; ask for specifics only if further changes are expected; Ayana coordinates |
 | Personal peer review / member access incomplete | High / high | Ayana's GitHub write access was verified; the students still need to perform and record their own substantive cross-review and verify supervisor/committee access to YouTrack/private evidence; both |
 | Local competition overlaps the proposal | High / medium | Use evidenced Astana comparison; test value of the combined household workflow; Ayana |
 | Incomplete ingredients or operational rules | High / high | Treat unknown data explicitly; obtain kitchen/stakeholder review before real use; Balgyn |

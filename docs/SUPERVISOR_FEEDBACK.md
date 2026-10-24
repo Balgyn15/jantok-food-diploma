@@ -2,10 +2,10 @@
 
 Supervisor: Omirzak Islam Amanzholuly. Coordinator: Ayana. YouTrack: JANTOK-11.
 
-The first-pre-defense package is prepared for presentation. No substantive supervisor feedback has been supplied for this record yet. After the review, record the actual date and feedback, what the team decided, who acts and the resulting file/PR. Merely presenting the repository does not satisfy the criterion that feedback leads to meaningful improvement.
+On 24 October 2026, the project owner reported that the supervisor had reviewed the work and said that everything was excellent (the owner's wording was «всё отлично»). This is a report from the project owner, not a directly checked supervisor message. The materials and exact version reviewed were not specified. No detailed written comments or requested changes were supplied. The team should attach the original message or meeting note if available and record any later specific comments and their disposition. No revisions are attributed to this general positive feedback.
 
 | Review date | Deliverable / version | Actual comment or decision | Responsible member | Response / resulting change | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| Awaiting review | Proposal, requirements, architecture, technology/evaluation baseline | No comment recorded yet | Both; Ayana coordinates | Pending | — |
+| 24 October 2026 (project-owner report) | First-submission materials; exact reviewed version not specified | General positive assessment: «всё отлично»; no specific change request provided | Ayana coordinates; both students respond if comments arrive | General feedback logged; no revision requested or claimed | Project owner's report; original supervisor message or meeting note not yet attached |
 
-Present the problem/scope, user evidence limits, selected technologies, main scenario/diagrams, test metrics and open decisions. Ask the supervisor to assess scope feasibility, engineering complexity and evaluation adequacy. Attach genuine written comments or anonymized meeting notes; do not invent approval or signatures. Track each comment to a disposition (accepted, revised proposal, or reasoned deferral) and a commit/PR where appropriate.
+For any later detailed feedback, record the date, reviewed version, exact comment, responsible member, disposition and resulting commit/PR. Do not infer an approval of a particular scope, design choice or implementation result from the general positive remark.
