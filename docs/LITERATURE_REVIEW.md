@@ -28,7 +28,7 @@ Bibliographic metadata and abstracts for all 10 scientific records were checked 
 1. Preference ranking and allergy exclusion solve different problems. A deterministic exclusion check should run before any preference score (sources 2, 10, 12). A blocked item must show a reason and never be offered as a selectable alternative.
 2. Explanations and user choice have promising evidence, but the studies are context-specific and may have high attrition (sources 3–6). The prototype shows meal details, replacement options and an allergy conflict; usability sessions must test whether people understand them.
 3. Personalized nutrition has mixed outcome evidence (sources 7–9). The diploma aim should be reliable family planning and traceable fulfillment, with operational and usability metrics, rather than an unproven health benefit.
-4. A source does not validate the local problem. The participant-level documentation of 3–5 representative discussions or an actual-client agreement required by JANTOK-2 is still outstanding. Findings from those sessions should revise requirements and this review.
+4. A source does not validate the local problem. The [anonymized P01–P06 notes](RELEVANCE_EVIDENCE_SUPPLEMENT.md) document six conversations reported by the project owner and add local problem observations, including counterexamples. The original conversations and consent records have not been independently checked; the small group does not establish prevalence or demand. Its findings should be tested with users and used to revise requirements and this review when warranted.
 
 ## Search and appraisal method
 

@@ -17,13 +17,13 @@ Supervisor: **Omirzak Islam Amanzholuly**. Each student uses an identifiable per
 
 The implementation scope covers one kitchen and delivery within Astana: household accounts, member questionnaires, restriction-aware menu selection, a 30-day subscription quote, meal changes subject to a deadline, delivery status and a daily staff plan. Other cities, a courier application, marketplace functionality, clinical nutrition advice and production payment/provider deployment are outside the first submission.
 
-For 24 October 2026 the deliverable is an analysis and design baseline: proposal, relevance evidence, literature, market and technology comparisons, testable requirements, three architectural diagrams, six mobile mockups, verification materials and a traceable project plan. A complete application is not required at this stage.
+For 24 October 2026 the deliverable is an analysis and design baseline: proposal, relevance evidence, literature, market and technology comparisons, testable requirements, three architectural diagrams, eight mobile mockups, verification materials and a traceable project plan. A complete application is not required at this stage.
 
-## Submission status — 23 October 2026
+## Submission status — 24 October 2026
 
-The analysis/design files and static mobile prototype are available. The team reports informal conversations with four acquaintances, approximately 25–40 years old, with a generally positive reaction to the idea; participant-level substance and the original discussion dates still need to be reconstructed in the [relevance evidence](docs/RELEVANCE_EVIDENCE.md). The current source folders describe component responsibilities. Earlier runnable preview examples were removed from this submission tree; their commits remain in repository history.
+The analysis/design files and static mobile prototype are available. The team supplied write-ups of six conversations held, according to the project owner, on 15 October 2026. [Anonymized P01–P06 notes](docs/RELEVANCE_EVIDENCE_SUPPLEMENT.md) separate observations from assumptions and link findings cautiously to requirements. The owner confirmed that participants consented to anonymized diploma notes and authorized posting these paraphrases to this public repository. The original conversation and consent records have not been independently checked; the older aggregate recollection of four acquaintances in [relevance evidence](docs/RELEVANCE_EVIDENCE.md) is historical context and is not added to the six records. The current source folders describe component responsibilities. Earlier runnable preview examples were removed from this submission tree; their commits remain in repository history.
 
-The [readiness checklist](docs/CHECKLIST_24_OCT.md) records the remaining evidence: confirmed discussion notes, actual contributions and peer review by both students, substantive supervisor feedback and the submission tag. Existing merged PRs do not contain submitted peer reviews.
+The [readiness checklist](docs/CHECKLIST_24_OCT.md) records the remaining evidence: a separately recorded proposal review request to the supervisor, personal student contributions and mutual review, subsequent supervisor feedback and access checks, and the submission tag. Earlier merged PRs did not receive pre-merge peer reviews; later Codex-assisted reviews do not by themselves certify either student's personal review.
 
 ## Selected technology baseline
 
@@ -35,8 +35,8 @@ Flutter/Dart for mobile; Next.js/React/TypeScript for the staff frontend; NestJS
 | --- | --- |
 | [docs](docs/) | All written analysis, design, planning and review deliverables |
 | [diagrams](diagrams/) | Editable Mermaid sources and readable SVG exports |
-| [prototype/screens](prototype/screens/) | Six editable mobile HTML mockups |
-| [prototype/previews](prototype/previews/) | Six matching PNG previews |
+| [prototype/screens](prototype/screens/) | Eight editable mobile HTML mockups |
+| [prototype/previews](prototype/previews/) | Eight matching PNG previews |
 | [src/mobile](src/mobile/) | Planned mobile component boundary |
 | [src/backend](src/backend/) | Planned API and worker component boundary |
 | [src/frontend](src/frontend/) | Planned staff web component boundary |
@@ -46,7 +46,7 @@ Flutter/Dart for mobile; Next.js/React/TypeScript for the staff frontend; NestJS
 ## Documentation
 
 1. [Project proposal](docs/PROPOSAL.md)
-2. [Relevance evidence](docs/RELEVANCE_EVIDENCE.md)
+2. [Relevance evidence](docs/RELEVANCE_EVIDENCE.md) and [anonymized interview notes](docs/RELEVANCE_EVIDENCE_SUPPLEMENT.md)
 3. [Literature review](docs/LITERATURE_REVIEW.md)
 4. [Existing-system comparison](docs/SYSTEM_COMPARISON.md)
 5. [Technology comparison](docs/TECH_COMPARISON.md)
