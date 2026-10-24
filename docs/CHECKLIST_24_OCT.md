@@ -4,7 +4,7 @@ Updated: 24 October 2026. This checklist compares the analysis/design snapshot w
 
 | Rubric item | Deliverable | Current status / remaining action |
 | --- | --- | --- |
-| 1. Project proposal | [PROPOSAL.md](PROPOSAL.md) | Defined problem, users, aim/objectives, team/supervisor, scope/outcomes and engineering complexity present |
+| 1. Project proposal | [PROPOSAL.md](PROPOSAL.md) | Defined problem, users, aim/objectives, team/supervisor, scope/outcomes and engineering complexity present. An actual review request to the supervisor must still be sent and recorded separately; the later response belongs to JANTOK-11. |
 | 2. Relevance evidence | [Historical aggregate recollection](RELEVANCE_EVIDENCE.md), [anonymized P01–P06 notes](RELEVANCE_EVIDENCE_SUPPLEMENT.md) | Six participant-level paraphrases from team-supplied write-ups, date/consent reported by the project owner, findings separated from assumptions and cautiously linked to FR/NFR. The older four-person recollection is not added to the count. Original conversation/consent records and the paraphrases have not been independently authenticated. |
 | 3. Literature | [LITERATURE_REVIEW.md](LITERATURE_REVIEW.md) | 12 used sources, 10 scientific (2022–2025); critical table/synthesis and full bibliography; PubMed metadata/abstracts and seven open full-text discussion/limitation sections checked; appraisal limits stated |
 | 4. Existing systems | [SYSTEM_COMPARISON.md](SYSTEM_COMPARISON.md) | Five Astana providers, eight common criteria, positive capability claims linked to official provider pages, dated evidence and unknowns; corrected Healthy Nation duration. Provider claims are not independently tested service performance. |
@@ -36,7 +36,7 @@ Updated: 24 October 2026. This checklist compares the analysis/design snapshot w
 
 1. The students' check of each P01–P06 paraphrase against the original conversation and private retention of consent records; the public notes rely on the project owner's confirmation.
 2. Each student's own meaningful review/corrections, identifiable commits and peer review; no backdating or simulated authorship.
-3. Supervisor's actual comments and documented response.
+3. A dated, delivered proposal review request to the supervisor, recorded separately from the supervisor's later comments and the team's documented response.
 4. Supervisor/committee access check and the immutable tag at the actual reviewed submission.
 
 The first-pre-defense files cover the analysis/design/planning structure. Full rubric compliance cannot be claimed until the outstanding evidence exists. A full application, live payment deployment, performance results and completed automated application suites are not minimum deliverables for 24 October.
