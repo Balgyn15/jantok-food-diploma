@@ -18,7 +18,7 @@ Later milestones are a sequence, not fabricated fixed commitments or a claim of 
 
 | Task | Lead | Expected output / acceptance |
 | --- | --- | --- |
-| JANTOK-1 Proposal | Balgyn | Clear title, team/supervisor, problem, users, aim, objectives, scope and expected outcomes |
+| JANTOK-1 Proposal | Balgyn | Clear title, team/supervisor, problem, users, aim, objectives, scope and expected outcomes; a separately recorded supervisor review request |
 | JANTOK-2 Relevance | Ayana | Document 3–5 substantive representative discussions or substantive client agreement; separate recall/observations/assumptions; trace findings |
 | JANTOK-3 Literature | Ayana | At least 12 meaningfully used sources, at least 8 scientific; critical table/synthesis and accurate references |
 | JANTOK-4 Existing systems | Ayana | 3–5 relevant systems, 6–10 consistent criteria and evidence for capability claims |
