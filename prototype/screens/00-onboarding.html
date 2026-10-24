@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JANTOK — первый вход</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Manrope, sans-serif; color: #0B1F17; }
+    .screen { width: 390px; height: 844px; padding: 20px; overflow: hidden; background: #F5F8F6; position: relative; }
+    .row { display: flex; align-items: center; }
+    .brand { font-size: 17px; font-weight: 800; letter-spacing: .07em; color: #0F3D2E; }
+    .chip { margin-left: auto; padding: 7px 11px; border-radius: 16px; background: #E3F1EA; color: #0F3D2E; font-size: 11px; font-weight: 800; }
+    .step { margin-top: 24px; font-size: 12px; font-weight: 700; color: #6B7D74; }
+    .bar { display: flex; gap: 6px; margin-top: 8px; }
+    .bar span { height: 5px; flex: 1; border-radius: 5px; background: #D8E7DF; }
+    .bar span:first-child { background: #1F6B4F; }
+    .hero { margin-top: 19px; padding: 21px; border-radius: 28px; color: white; background: linear-gradient(135deg, #082A1E, #1F6B4F); }
+    .hero-icon { width: 45px; height: 45px; display: grid; place-items: center; border-radius: 15px; background: rgba(255,255,255,.14); }
+    .hero h1 { font-size: 24px; line-height: 1.25; margin: 14px 0 8px; }
+    .hero p { font-size: 12px; line-height: 1.55; opacity: .84; margin: 0; }
+    .card { margin-top: 13px; padding: 18px; border-radius: 26px; background: white; box-shadow: 0 12px 32px rgba(15,61,46,.08); }
+    .card h2 { font-size: 16px; margin: 0 0 15px; }
+    label { display: block; font-size: 12px; font-weight: 800; margin: 13px 0 6px; }
+    input { width: 100%; height: 45px; border: 1px solid #D9E7DF; border-radius: 14px; padding: 0 13px; font: 600 13px Manrope, sans-serif; color: #0B1F17; background: #F8FAF9; }
+    .helper { font-size: 11px; line-height: 1.4; color: #6B7D74; margin-top: 7px; }
+    .next { margin-top: 12px; border-radius: 20px; background: #E3F1EA; color: #0F3D2E; padding: 13px 15px; font-size: 12px; line-height: 1.45; }
+    .next strong { display: block; margin-bottom: 2px; }
+    .bottom { position: absolute; left: 20px; right: 20px; bottom: 24px; }
+    .primary { display: flex; align-items: center; justify-content: center; width: 100%; height: 54px; border-radius: 27px; background: #0F3D2E; color: white; text-decoration: none; font-size: 14px; font-weight: 800; }
+    .caption { font-size: 11px; color: #6B7D74; text-align: center; line-height: 1.45; margin: 10px 15px 0; }
+  </style>
+</head>
+<body>
+  <main class="screen">
+    <div class="row"><span class="brand">JANTOK</span><span class="chip">демо-сценарий</span></div>
+    <div class="step">Первый вход · шаг 1 из 3</div>
+    <div class="bar" aria-label="Первый из трёх шагов"><span></span><span></span><span></span></div>
+    <section class="hero">
+      <div class="hero-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="white" stroke-width="2"/><circle cx="14" cy="14" r="5" stroke="white" stroke-width="2"/><path d="M4 3v7M7 3v7M7 10v14M24 4v20" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+      <h1>Питание для вашей семьи</h1>
+      <p>Сначала создайте домохозяйство. Затем добавьте участников и заполните их анкеты.</p>
+    </section>
+    <section class="card" aria-label="Создание домохозяйства">
+      <h2>Создать семью</h2>
+      <label for="household">Название семьи <span aria-hidden="true">*</span></label>
+      <input id="household" value="Семья Балғын" required aria-describedby="household-help">
+      <div class="helper" id="household-help">Обязательное поле. При пустом названии покажем ошибку.</div>
+      <label for="owner">Ваше имя <span aria-hidden="true">*</span></label>
+      <input id="owner" value="Балғын" required>
+    </section>
+    <div class="next"><strong>Далее — состав семьи и анкеты</strong>После создания добавьте Айым и Али. Их ограничения задаются отдельно.</div>
+    <div class="bottom">
+      <a class="primary" href="02-family.html">Создать семью и продолжить →</a>
+      <p class="caption">Пример первого входа. Поля показаны заполненными; данные не сохраняются.</p>
+    </div>
+  </main>
+</body>
+</html>
