@@ -7,7 +7,7 @@ Updated: 24 October 2026. YouTrack: JANTOK-10. All deadlines use Asia/Almaty. Th
 | Milestone | Target | Exit condition |
 | --- | --- | --- |
 | First-pre-defense analysis/design baseline | 24 Oct 2026 | Proposal, literature/market/technology comparisons, requirements, three diagrams, eight screens, verification materials and risks linked from README |
-| Evidence and joint review | Before first submission | Six anonymized interview paraphrases checked by the students against the conversations; consent records retained privately; both students make identifiable substantive contributions and cross-review; supervisor comments/dispositions recorded |
+| Evidence and joint review | Before first submission | Six anonymized interview paraphrases checked by the students against the conversations; consent records retained privately; both students make identifiable substantive contributions and cross-review; supervisor comments/dispositions recorded. The owner reports personal cross-review and an oral positive supervisor review on 24 Oct; individual records are not yet attached. |
 | First submission | 24 Oct 2026, at actual hand-in | Reviewed commit, immutable `prob-period-1` tag required by the submission form, repository link, completed/pending summary and accessible evidence |
 | Foundation and core workflow | Next implementation phase; dates agreed after feedback | Identity/households and schema, then restrictions/menu/quote, each through reviewed task PRs |
 | Fulfillment and evaluation | Later phase; dates agreed with supervisor | Staff/delivery path, integration/security tests, usability/baseline and measured outcomes |
@@ -38,7 +38,7 @@ Research/evidence/UX work and engineering/design/verification work are complemen
 | --- | --- | --- |
 | Interview paraphrases and consent evidence need checking | Medium / high | Have the students compare P01–P06 with the actual conversations and retain consent records privately; do not infer representative market demand; Ayana |
 | Supervisor feedback is too general to guide revisions | Medium / medium | Record the project owner's report of a positive assessment accurately; ask for specifics only if further changes are expected; Ayana coordinates |
-| Personal peer review / member access incomplete | High / high | Ayana's GitHub write access was verified; the students still need to perform and record their own substantive cross-review and verify supervisor/committee access to YouTrack/private evidence; both |
+| Personal peer review / member access records incomplete | Medium / medium | The owner confirms both students personally cross-reviewed and supervisor/committee YouTrack access; preserve individual review/access records where available. Ayana's GitHub write access was separately verified; both |
 | Local competition overlaps the proposal | High / medium | Use evidenced Astana comparison; test value of the combined household workflow; Ayana |
 | Incomplete ingredients or operational rules | High / high | Treat unknown data explicitly; obtain kitchen/stakeholder review before real use; Balgyn |
 | Commercial tariffs/provider contracts unavailable | High / medium | Use synthetic cases and documented adapters; production launch stays outside this submission; Balgyn |
@@ -50,4 +50,4 @@ Keep the same repository throughout the diploma. A task branch contains a cohere
 
 PRs #1–#4 were merged on 22–23 October without submitted pre-merge GitHub peer reviews. The later Balgyn review on PR #4 is explicitly retrospective. Follow-up PRs #5–#7 received Codex-assisted content reviews through the Ayana account; those comments do not certify Ayana's personal review or either student's understanding. Do not recreate, backdate or rewrite history to imply earlier individual contributions.
 
-Public GitHub reading access and Ayana's collaborator write permission are verified. Supervisor/committee access to YouTrack/private supporting material remains to be checked. At each submission tag the actual reviewed commit and record tag/SHA, completed work, limitations and outstanding tasks. Do not move prior submission tags or replace the repository to manufacture a development history.
+Public GitHub reading access and Ayana's collaborator write permission are verified. The project owner confirms supervisor/committee access to YouTrack; private supporting-material access has not been separately checked. At each submission tag the actual reviewed commit and record tag/SHA, completed work, limitations and outstanding tasks. Do not move prior submission tags or replace the repository to manufacture a development history.
