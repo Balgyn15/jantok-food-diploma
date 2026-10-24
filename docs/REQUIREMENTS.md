@@ -44,4 +44,4 @@ One kitchen and Astana are the operating boundary. Hard dietary exclusions prece
 | NFR-02 | Engineering consistency decision ADR-01/02 | Quote/order snapshots; API rule authority | TC-05/07/13 |
 | NFR-03/04/05 | Evaluation targets selected for the project | Mobile and API | TC-14/15/16 |
 
-See [test cases](../tests/test-cases.csv) for procedures and expected results. EV-01 is a recalled aggregate account; participant-level evidence is outstanding. Requirement references do not imply that every proposed feature was explicitly requested by an interviewee.
+See [test cases](../tests/test-cases.csv) for procedures and expected results. In this 23 October baseline EV-01 was a recalled aggregate account. The [24 October interview supplement](RELEVANCE_EVIDENCE_SUPPLEMENT.md) adds project-owner-reported participant-level paraphrases and identifies which requirements they motivate; those notes still need independent review. Requirement references do not imply that every proposed feature was explicitly requested by an interviewee.
