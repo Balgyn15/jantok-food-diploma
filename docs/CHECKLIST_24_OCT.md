@@ -1,19 +1,19 @@
 # 24 October submission checklist
 
-Updated: 23 October 2026. This checklist compares the actual snapshot with the supplied rubric. Version 1.0 means a defined analysis/design baseline; it does not imply supervisor approval, completed implementation or completed human review.
+Updated: 24 October 2026. This checklist compares the analysis/design snapshot with the supplied rubric and the follow-up work in [PR #5](https://github.com/Balgyn15/jantok-food-diploma/pull/5), [PR #6](https://github.com/Balgyn15/jantok-food-diploma/pull/6) and [PR #7](https://github.com/Balgyn15/jantok-food-diploma/pull/7). It does not imply supervisor approval, completed implementation or completed personal review by either student.
 
 | Rubric item | Deliverable | Current status / remaining action |
 | --- | --- | --- |
 | 1. Project proposal | [PROPOSAL.md](PROPOSAL.md) | Defined problem, users, aim/objectives, team/supervisor, scope/outcomes and engineering complexity present |
-| 2. Relevance evidence | [RELEVANCE_EVIDENCE.md](RELEVANCE_EVIDENCE.md) | Four conversations/approximate 25–40 age range and positive reaction reported by team; original dates and substantive individual findings missing; complete honest reconstruction/follow-up |
+| 2. Relevance evidence | [Historical aggregate recollection](RELEVANCE_EVIDENCE.md), [anonymized P01–P06 notes](RELEVANCE_EVIDENCE_SUPPLEMENT.md) | Six participant-level paraphrases from team-supplied write-ups, date/consent reported by the project owner, findings separated from assumptions and cautiously linked to FR/NFR. The older four-person recollection is not added to the count. Original conversation/consent records and the paraphrases have not been independently authenticated. |
 | 3. Literature | [LITERATURE_REVIEW.md](LITERATURE_REVIEW.md) | 12 used sources, 10 scientific (2022–2025); critical table/synthesis and full bibliography; PubMed metadata/abstracts and seven open full-text discussion/limitation sections checked; appraisal limits stated |
-| 4. Existing systems | [SYSTEM_COMPARISON.md](SYSTEM_COMPARISON.md) | Five Astana providers, eight common criteria, dated evidence and unknowns; no unsupported claim of no competition |
+| 4. Existing systems | [SYSTEM_COMPARISON.md](SYSTEM_COMPARISON.md) | Five Astana providers, eight common criteria, positive capability claims linked to official provider pages, dated evidence and unknowns; corrected Healthy Nation duration. Provider claims are not independently tested service performance. |
 | 5. Technologies | [TECH_COMPARISON.md](TECH_COMPARISON.md), [DECISIONS.md](DECISIONS.md) | Five key decisions, three alternatives each; selected Flutter/NestJS/PostgreSQL/HTTP/Next.js baseline and tradeoffs |
 | 6. Requirements | [REQUIREMENTS.md](REQUIREMENTS.md) | Eight FR and five NFR, P0/P1, acceptance criteria and design/test mapping; stakeholder review outstanding |
 | 7. Architecture | [ARCHITECTURE.md](ARCHITECTURE.md), [diagrams](../diagrams/) | Required three views; editable .mmd and SVG pairs; component/data/scenario alignment described |
-| 8. UX | [UX_PROTOTYPE.md](UX_PROTOTYPE.md), [prototype](../prototype/) | Six HTML/PNG mobile screens, scenario links, quote/staff state specification; team confirms design archive permission; user walkthrough remains future work |
+| 8. UX | [UX_PROTOTYPE.md](UX_PROTOTYPE.md), [prototype](../prototype/) | Eight HTML/PNG mobile screens, including first use and subscription choice; a linked static journey, fields/states and assumptions. Six prior screens came from the team-supplied design archive; two follow-up scenes were created with Codex assistance. User walkthrough remains future work. |
 | 9. Verification/evaluation | [EVALUATION.md](EVALUATION.md), [tests](../tests/) | Metrics, conditions, baseline, 16 planned cases and synthetic expected outputs present; actual application testing follows runnable implementation |
-| 10. Management/risks | [PROJECT_PLAN.md](PROJECT_PLAN.md), [YouTrack](https://balgyn.youtrack.cloud/projects/JANTOK/issues) | Assigned/prioritized tasks, deadlines, scope, milestones and risks present; genuine contributions/cross-review, access check and submission tag outstanding |
+| 10. Management/risks | [PROJECT_PLAN.md](PROJECT_PLAN.md), [YouTrack](https://balgyn.youtrack.cloud/projects/JANTOK/issues) | Assigned/prioritized tasks, deadlines, scope, milestones and risks present. Codex-assisted PR reviews have been recorded, but the students' own substantive contributions and mutual review, supervisor/committee access check and submission tag remain to be established. |
 | 11. Supervisor feedback | [SUPERVISOR_FEEDBACK.md](SUPERVISOR_FEEDBACK.md) | Actual dated feedback and resulting revisions outstanding |
 
 ## Repository minimum and structure
@@ -24,19 +24,19 @@ Updated: 23 October 2026. This checklist compares the actual snapshot with the s
 | Source organized by component | src/mobile, src/backend, src/frontend contain component plans; executable application is not required for this stage |
 | Written documentation together | docs contains all written deliverables and this checklist |
 | Editable diagrams and readable exports | diagrams contains three paired sources/exports |
-| Prototype material | prototype contains six editable screens and matching PNG previews |
+| Prototype material | prototype contains eight editable screens and matching PNG previews |
 | Tests and supporting materials | tests contains planned cases and synthetic fixture; executable tests follow runnable code |
 | Configuration/dependencies | config contains placeholder environment and dependency/manifest plan; real manifests follow runnable components |
 | Progressive contributions by both members | Not yet demonstrated by the repository history; assisted preparation alone does not satisfy it |
 | Task ↔ change traceability | Task IDs in existing commits/PRs and PR links in YouTrack; revised deliverables will be linked to their review PR |
-| Branches and review before merge | PR #1/#2 merged without submitted reviews; next PR must receive actual peer review |
+| Branches and review before merge | Earlier PRs merged without submitted pre-merge reviews. Follow-up PRs #5–#7 contain explicitly labelled Codex-assisted reviews; these do not certify personal peer review by the students. |
 | Submission tag / hand-in statement | pre-defense-1 is created at actual reviewed submission; record exact SHA, completed work, limits and open tasks |
 
 ## Human evidence still required
 
-1. Substantive notes/follow-up for the four real representatives or a substantive actual-client agreement.
+1. The students' check of each P01–P06 paraphrase against the original conversation and private retention of consent records; the public notes rely on the project owner's confirmation.
 2. Each student's own meaningful review/corrections, identifiable commits and peer review; no backdating or simulated authorship.
 3. Supervisor's actual comments and documented response.
-4. Access check, reviewed merge and immutable tag at the real submission.
+4. Supervisor/committee access check and the immutable tag at the actual reviewed submission.
 
 The first-pre-defense files cover the analysis/design/planning structure. Full rubric compliance cannot be claimed until the outstanding evidence exists. A full application, live payment deployment, performance results and completed automated application suites are not minimum deliverables for 24 October.
