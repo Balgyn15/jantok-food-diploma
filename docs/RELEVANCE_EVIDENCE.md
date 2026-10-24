@@ -2,6 +2,8 @@
 
 Date: 23 October 2026. Lead: Ayana. YouTrack: JANTOK-2.
 
+> Historical baseline: this version records what the team recalled on 23 October. On 24 October the project owner supplied six participant write-ups and confirmed that those conversations occurred on 15 October. See the [anonymized interview supplement](RELEVANCE_EVIDENCE_SUPPLEMENT.md) for the new participant-level review candidate. It is not established whether any of those six are among the four conversations recalled below, so the counts must not be added. The completion assessment below refers to this earlier aggregate account alone.
+
 ## Evidence collected so far
 
 The team confirms four informal conversations with acquaintances, approximately 25–40 years old. The initial team account describes working and/or married acquaintances; individual employment/family details were not retained. On 23 October 2026 the team recalled generally positive reactions from all four to the service idea. No recording or contemporaneous participant-level notes were preserved; original discussion dates and detailed individual answers remain unknown. This is a retrospective account, with no verbatim quotations or invented participant characteristics.
